@@ -70,7 +70,7 @@ const getAlluser = asyncHandler(async (req, res) => {
         ],
       }
     : {};
-    const user = await User.find(keyword)//.find({ _id : { $ne : req.user._id}}) // $ne is used for not equalto 
+    const user = await User.find(keyword).find({ _id : { $ne : req.user._id}}) // $ne is used for not equalto 
     res.status(200).json({user})
 });
 

@@ -18,6 +18,7 @@ connectToDb()
 
 // Importing routers
 const userRoutes = require('./routes/userRoutes')
+const chatRoutes = require('./routes/chatRoutes')
 
 // Bodyparser
 const bodyParser = require('body-parser');
@@ -29,6 +30,7 @@ app.use(cors());
 require('dotenv').config();
 
 app.use('/api/user', userRoutes)
+app.use('/api/chat', chatRoutes)
 
 
 // Error handeleing middleware 
