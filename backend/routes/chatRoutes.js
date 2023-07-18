@@ -16,10 +16,10 @@ router.get('/', protect, fetchChats)
 // create groups
 router.post('/group', protect, createGroup)
 // Rename group
-router.put('/rename ', protect, renameGroup)
-// Remove user from a group
-router.put('/removeuserfromgroup ', protect, removeUserFromGroup)
+router.put('/rename', protect, renameGroup)
 //  Add user in group
-router.put('/adduseringroup ', protect, addUserInGroup)
+router.put('/adduseringroup', protect, addUserInGroup)
+// Remove user from a group
+router.put('/removeuserfromgroup', protect, removeUserFromGroup)
 
 module.exports = router
